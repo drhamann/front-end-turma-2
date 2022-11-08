@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title> Aula 2</title>
+    <style>
+        header {
+            height: 100px;
+            align-items: center;
+        }
+
+        nav {
+            height: 100px;
+            width: 90%;
+            padding: 5%;
+            align-items: center;
+        }
+
+        section {
+            padding: 1%;
+            background-color: aqua;
+        }
+    </style>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#Posts">Exemplo de link</a>
+    </header>
+    <nav>
+        <ol>
+            <li>
+                <a href="#Table">Posts</a>
+            </li>
+            <li>
+                <a href="#Form">Formulario</a>
+            </li>
+            <li>
+                <a href="#Caracteres">Caracteres</a>
+            </li>
+            <li>
+                <a href="#Multimedia">Multimedia - Ola mundo</a>
+            </li>
+            <li>
+                <a href="#Todo">Exercicio TODO</a>
+            </li>
+        </ol>
+    </nav>
+    <section id="Table">
+
+        <table>
+            <tr>
+                <th colspan="2">
+                    Custo
+                </th>
+                <th>
+                    Valor em R$
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Mensalidade
+                </td>
+                <td>
+                    Faculdade
+                </td>
+                <td>
+                    500,00
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Plano de saude
+                </td>
+                <td>
+                    Unimed
+                </td>
+                <td>
+                    1000,00
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="Form">
+        <form>
+            <h2>Entre em contato</h2>
+            <h3> Informse seus dados para mais informações sobre Contabilidade Info</h3>
+            <section>
+                <label for="type">Tipo de contato </label>
+                <select id="type">
+                    <option>Sugestão</option>
+                    <option>Uso</option>
+                    <option>Preço</option>
+                </select><br><br>
+            </section>
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" id="name"><br><br>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email"><br><br>
+            </div>
+            <div>
+                <label for="celular">Celular: </label>
+                <input type="tel" id="celular"><br><br>
+            </div>
+            <div>
+                <label for="message">Message: </label><br>
+                <textarea id="message"></textarea><br>
+            </div>
+            <input type="button" value="Send">
+        </form>
+    </section>
+    <section id="Caracteres">
+        <h2> Caracteres</h2>
+        <strong> &lt; &latail; &lagran; &aleph; &gt;</strong>
+    </section>
+    <aside id="Multimedia">
+        <h2> Olá mundo html</h2>
+        <iframe title="aula2" src="ola-mundo.html" height="400" width="400"></iframe>
+    </aside>
+    <div id="Todo">
+        <h2>Todo</h2>
+        <iframe title="aula2" src="exercicio-todo.html" height="500" width="800"></iframe>
+    </div>
+    <footer>
+        Coopright Lages 2022
+    </footer>
+</body>
+
+</html>
