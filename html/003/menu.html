@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>ToDo</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script>
+        function sample() {
+            console.log("olá java script")
+            var elements = document.getElementsByClassName("row")
+            var elem = document.getElementById("menu-6");//Ex
+            elem.innerHTML = "Hello World!";// escrever algo dentro do elementor
+
+        }
+
+    </script>
+</head>
+
+<body class="m-1" onload="sample()">
+
+    <section id="menu-6" class="wide-70 menu-section division">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <div class="section-title mb-60 text-center">
+
+                        <h2 class="h2 red-color">Pizza Menu</h2>
+
+                        <p class="p">Menu do restaurante pizzas
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="h5-sm coffee-color">4 Queijo</h5>
+                        <p class="grey-color">Molho de tomate, mussarela, parmesão, gorgonzolan cheddar</p>
+                        <h6 class="card-subtitle mb-2 text-muted">R$22.50</h6>
+                        <div class="menu-6-img rel">
+                            <div class="hover-overlay">
+                                <img class="img-fluid" src="pizza.png" alt="menu-image">
+                                <span class="item-code bg-tra-dark">Code: 0850</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="h5-sm coffee-color">Calabresa</h5>
+                        <p class="grey-color">Molho de tomate, mussarela, calabresa, cebola</p>
+                        <h6 class="card-subtitle mb-2 text-muted">R$22.50</h6>
+                        <div class="menu-6-img rel">
+                            <div class="hover-overlay">
+                                <img class="img-fluid" src="pizza.png" alt="menu-image">
+                                <span class="item-code bg-tra-dark">Code: 0850</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
