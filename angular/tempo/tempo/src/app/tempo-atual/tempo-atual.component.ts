@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { ITempoAtual } from '../itempo-atual';
 import { TempoService } from '../tempo/tempo.service';
 
@@ -8,18 +8,9 @@ import { TempoService } from '../tempo/tempo.service';
   styleUrls: ['./tempo-atual.component.css']
 })
 export class TempoAtualComponent {
-  tempoAtual: ITempoAtual
-  constructor(tempoService: TempoService) {
+  tempoAtual?: ITempoAtual
 
-    this.tempoAtual = {
-      cidade: 'Outra',
-      pais: 'Brasil',
-      date: '22/11/2022',
-      descricao: 'Ensolarado',
-      temperatura: 20,
-      image: 'assets/img/ensolarado.svg'
-    }
+  constructor(tempoService: TempoService) {
     tempoService.buscarTempoAtual("Florianopolis", "Brasil").subscribe(data => this.tempoAtual = data);
   }
-
 }
