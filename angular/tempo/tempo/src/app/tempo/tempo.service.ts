@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { debounceTime, map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ITempoAtual } from '../itempo-atual';
 
@@ -11,10 +11,22 @@ export class TempoService {
 
   constructor(private httpClient: HttpClient) { }
 
-  buscarTempoAtual(cidade: string, pais: string): Observable<ITempoAtual> {
+  buscarTempoAtual(busca: string | number, pais: string): Observable<ITempoAtual> {
+
+    let uriParams = ''
+    if (typeof busca === 'string') {
+      uriParams = `q=${busca}`
+    } else {
+      uriParams = `zip=${busca}`
+    }
+
+    if (pais) {
+      uriParams = `${uriParams},${pais}`
+    }
+
     return this.httpClient.get<ICurrentWeatherData>(
       `${environment.baseUrl}api.openweathermap.org/data/2.5/weather?` +
-      `q=${cidade},${pais}&appid=${environment.appId}`
+      `${uriParams} &appid=${environment.appId}`
     ).pipe(map(data => this.transformToITempoAtual(data)))
   }
 
