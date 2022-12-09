@@ -14,22 +14,5 @@
 </div>
 
 <div fxLayoutAlign="center">
-  <div fxLayout="row">
-    <div fxFLex></div>
-    <mat-card fxFlex="500px">
-      <mat-card-header>
-        <mat-card-title>Previsões</mat-card-title>
-        <mat-card-subtitle>Previsão atual</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-
-        <div fxLayoutAlign="center">
-          <app-busca-cidade></app-busca-cidade>
-        </div>
-
-        <app-tempo-atual></app-tempo-atual>
-      </mat-card-content>
-    </mat-card>
-    <div fxFlex></div>
-  </div>
+  <router-outlet></router-outlet>
 </div>

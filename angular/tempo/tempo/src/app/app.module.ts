@@ -8,13 +8,16 @@ import { TempoService } from './tempo/tempo.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { BuscaCidadeComponent } from './busca-cidade/busca-cidade.component'
+import { BuscaCidadeComponent } from './busca-cidade/busca-cidade.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NotfoundComponent } from './notfound/notfound.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     TempoAtualComponent,
-    BuscaCidadeComponent
+    BuscaCidadeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { BuscaCidadeComponent } from './busca-cidade/busca-cidade.component'
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [TempoService],
   bootstrap: [AppComponent]
